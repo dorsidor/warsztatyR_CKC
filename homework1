@@ -1,0 +1,21 @@
+muzeum2wojny -> m2w
+
+m2w$type -> typy
+
+names(tabletypy) <- c("typy", "czestosc")
+
+as.data.frame(table(typy)) -> tabletypy
+
+write.csv(tabletypy, file="tabletypy.csv", row.names = FALSE)
+
+
+
+max(m2w$comments_count) 
+
+m2w %>% filter(comments_count == max(m2w$comments_count))
+
+m2w %>% filter(likes_count == max(m2w$likes_count))
+
+mean(m2w$likes_count)
+
+median(m2w$likes_count)
